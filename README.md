@@ -1,3 +1,3 @@
 # studienarbeit-maxuniverse
 
-Projekt: [dynkell](https://git.maxuniverse.de/mxu/func-prog "MaxUniverse - GitLab")
+Projekt: [dynkell](https://git.maxuniverse.de/mxu/dynkell.git "MaxUniverse - GitLab")
