@@ -13,4 +13,4 @@ RUN stack build --test --copy-bins
 EXPOSE 7001
 
 # Run the server command
-CMD [“run-server”]
+CMD [“stack”, "exec", "dynkellClient-exe"]
