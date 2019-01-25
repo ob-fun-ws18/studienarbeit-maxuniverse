@@ -10,7 +10,7 @@ RUN apt update
 RUN apt install -y aptitude
 RUN aptitude dist-upgrade -y
 RUN aptitude install -y net-tools default-mysql-server default-mysql-client curl ctop htop vim supervisor
-CMD mysql start
+RUN supervisorctl mysqld start
 
 # Install haskell
 RUN aptitude install -y ghc haskell-platform 
@@ -22,6 +22,7 @@ RUN aptitude clean
 # Build and test our code, then install the “run-server” executable
 RUN stack setup
 RUN stack build
+CMD ["stack", "exec", "dynkellServer-exe"]
 
 # Expose a port to run our application
 EXPOSE 7000
