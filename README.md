@@ -18,6 +18,11 @@ hinterlegt. Per "POST" wird vom Client aus eine Anfrage gestartet, um die aktuel
 externe IP-Adresse des Routers zu ermitteln. 
 
 ## Installation:
+Auf dem Dynkell-Server wird die Benutzung von MySQL vorrausgesetzt, da die Library 'HDBC' diese verwendet. Sollte auf Ihrem System MySQL fehlen, dann benutzen Sie den untenstehenden Link, um es einzurichten.
+```
+https://www.unixmen.com/install-mariadb-arch-linuxmanjaro/
+```
+
 Fuer die Ausfuehrung des Servers wird Docker vorrausgesetzt. Um Docker einzurichten wird der Guide vom Entwickler benutzt:
 ```
 https://docs.docker.com/v17.09/engine/installation/
