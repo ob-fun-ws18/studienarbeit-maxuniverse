@@ -2,8 +2,8 @@
 FROM haskell:latest
 
 # Checkout our code onto the Docker container
-WORKDIR /app
 ADD . /app
+WORKDIR /app
 
 # Build and test our code, then install the “run-server” executable
 RUN stack setup
