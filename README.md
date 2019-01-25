@@ -31,11 +31,14 @@ Docker Container werden mit den Befehlen erstellt.
 ```
 docker build -t backend ./dynkellServer/
 docker build -t frontend ./dynkellClient/
+docker build -t database ./dynkellServer/db/
 ```
 
-Starten Sie den Dynkell-Client / sowie -Server werden mit den Befehlen gestartet.
+Starten Sie den Dynkell-Client / sowie -Server + Database werden mit den Befehlen gestartet.
+Server und Database werden zusammen auf einem Host gestartet.
 ```
 docker run --name dynkell_server -p 7000:7000 -d backend
+docker run --name dynkell_db -p 3306:3306 -d database
 docker run --name dynkell_client -p 7001:7001 -d frontend
 ```
 
