@@ -1,0 +1,52 @@
+name:                dynkellClient
+version:             0.1.0.0
+github:              "https://git.maxuniverse.de/mxu/dynkell"
+license:             MIT
+author:              "Maximilian Schmitz, Benjamin Bratulesco"
+maintainer:          "m.schmitz@maxuniverse.de, "
+copyright:           "2018 Maximilian Schmitz, Benjamin Bratulesco"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/dynkellClient#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- network >=2.0 && <3
+- bytestring
+- cron
+library:
+  source-dirs: src
+
+executables:
+  dynkellClient-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - dynkellClient
+
+tests:
+  dynkellClient-test:
+    main:                Main.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - dynkellClient
+    - hspec
+    - QuickCheck

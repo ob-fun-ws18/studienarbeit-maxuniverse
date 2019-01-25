@@ -1,0 +1,3 @@
+insert in users: 1 test 229383124386787 example.com
+insert in domains: 1 example.com CNAME
+insert in records: 1 1 example.com A 0.0.0.0 68400 NULL NULL 0 NULL 1

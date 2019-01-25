@@ -1,0 +1,9 @@
+flags: {}
+packages:
+- .
+extra-deps:
+- periodic-0.1.0.0
+- hedis-0.10.10
+compiler-check: newer-minor
+resolver: lts-12.21
+allow-newer: true
